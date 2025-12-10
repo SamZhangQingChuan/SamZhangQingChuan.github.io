@@ -1,0 +1,45 @@
+---
+layout: page
+title: 首页
+subtitle: 欢迎来到我的技术博客
+---
+
+<div class="posts-list">
+  {% for post in site.posts limit: 10 %}
+  <article class="post-preview">
+    <a href="{{ post.url | relative_url }}">
+      <h2 class="post-title">{{ post.title }}</h2>
+      {% if post.subtitle %}
+      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      {% endif %}
+    </a>
+
+    <p class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%Y年%m月%d日" }}
+      </time>
+      {% if post.categories.size > 0 %}
+      <span class="post-categories">
+        {% for category in post.categories %}
+          <a href="{{ '/categories/' | relative_url }}{{ category | slugify }}">{{ category }}</a>
+          {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </span>
+      {% endif %}
+    </p>
+
+    <div class="post-entry-container">
+      <div class="post-entry">
+        {{ post.excerpt | strip_html | xml_escape | truncatewords: 50 }}
+        <a href="{{ post.url | relative_url }}" class="post-read-more">[阅读更多]</a>
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if site.posts.size > 10 %}
+<div class="blog-navigation">
+  <a href="{{ '/blog' | relative_url }}" class="btn btn-primary">查看所有文章</a>
+</div>
+{% endif %}
