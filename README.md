@@ -84,3 +84,7 @@ bundle exec jekyll serve
 - [Jekyll 官方文档](https://jekyllrb.com/)
 - [GitHub Pages 文档](https://docs.github.com/pages)
 - [Markdown 语法指南](https://www.markdownguide.org/)
+
+## CI
+
+此提交用于触发 CI 运行。
