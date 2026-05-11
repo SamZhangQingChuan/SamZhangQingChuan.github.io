@@ -1,0 +1,42 @@
+.post-toc {
+  position: fixed;
+  top: 145px;
+  left: max(24px, calc((100vw - 960px) / 2 - 210px));
+  width: 180px;
+  padding: 12px 14px;
+  border-left: 2px solid #e5e7eb;
+  color: #6b7280;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.post-toc-title {
+  margin-bottom: 8px;
+  color: #111827;
+  font-weight: 700;
+}
+
+.post-toc a {
+  display: block;
+  margin: 7px 0;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.post-toc a:hover,
+.post-toc a:focus {
+  color: #0085a1;
+  text-decoration: none;
+}
+
+@media (max-width: 1180px) {
+  .post-toc {
+    position: static;
+    width: auto;
+    margin: 28px 0 32px;
+    padding: 12px 16px;
+    border-left: 3px solid #e5e7eb;
+    background: #f9fafb;
+  }
+}

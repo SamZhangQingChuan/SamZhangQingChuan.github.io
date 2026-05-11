@@ -1,0 +1,16 @@
+.navbar-custom .navbar-nav .nav-item {
+  text-transform: none;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+  font-weight: 500;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
