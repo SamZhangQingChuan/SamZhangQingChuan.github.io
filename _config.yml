@@ -20,6 +20,8 @@ permalink: /:year/:month/:day/:title/
 
 # Beautiful Jekyll theme settings
 show-avatar: false
+site-css:
+  - /assets/css/site.css
 social-links:
   github: SamZhangQingChuan
   email: qingczha@gmail.com
