@@ -1,0 +1,41 @@
+# Site settings
+title: ""
+description: ""
+author: "Sam Zhang"
+email: "qingczha@gmail.com"
+url: "https://samzhangqingchuan.github.io"
+baseurl: ""
+
+# Jekyll settings
+remote_theme: daattali/beautiful-jekyll
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Beautiful Jekyll theme settings
+show-avatar: false
+social-links:
+  github: SamZhangQingChuan
+  email: qingczha@gmail.com
+
+# Navigation links
+navbar-links:
+  关于: "about"
+  博客: "blog"
+  标签: "tags"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

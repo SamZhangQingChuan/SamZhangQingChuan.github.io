@@ -1,0 +1,64 @@
+---
+layout: page
+title: 标签
+subtitle: 所有标签和分类
+permalink: /tags/
+---
+
+<div class="tags-page">
+  {% assign sorted_tags = site.tags | sort %}
+  {% assign sorted_categories = site.categories | sort %}
+  
+  {% if sorted_tags.size > 0 %}
+    <h2>标签</h2>
+    <div class="tags-list">
+      {% for tag in sorted_tags %}
+        {% assign tag_name = tag[0] %}
+        {% assign tag_posts = tag[1] %}
+        <div class="tag-item">
+          <h3 id="{{ tag_name | slugify }}" class="tag-name">
+            <i class="fas fa-tag"></i> {{ tag_name }}
+            <span class="tag-count">({{ tag_posts.size }})</span>
+          </h3>
+          <ul class="tag-posts">
+            {% for post in tag_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <span class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  
+  {% if sorted_categories.size > 0 %}
+    <h2>分类</h2>
+    <div class="tags-list">
+      {% for category in sorted_categories %}
+        {% assign category_name = category[0] %}
+        {% assign category_posts = category[1] %}
+        <div class="tag-item">
+          <h3 id="{{ category_name | slugify }}" class="tag-name">
+            <i class="fas fa-folder"></i> {{ category_name }}
+            <span class="tag-count">({{ category_posts.size }})</span>
+          </h3>
+          <ul class="tag-posts">
+            {% for post in category_posts %}
+            <li>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              <span class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+  
+  {% if sorted_tags.size == 0 and sorted_categories.size == 0 %}
+    <p>暂无标签和分类。</p>
+  {% endif %}
+</div>
+
