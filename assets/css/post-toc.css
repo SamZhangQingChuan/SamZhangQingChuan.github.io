@@ -17,6 +17,12 @@
   font-weight: 700;
 }
 
+.post-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .post-toc a {
   display: block;
   margin: 7px 0;
