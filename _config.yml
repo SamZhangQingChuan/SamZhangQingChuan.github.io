@@ -26,11 +26,30 @@ social-links:
   github: SamZhangQingChuan
   email: qingczha@gmail.com
 
+# Comments
+giscus:
+  hostname: giscus.app
+  repository: SamZhangQingChuan/SamZhangQingChuan.github.io
+  repository-id: R_kgDOGnceNg
+  category: Announcements
+  category-id: DIC_kwDOGnceNs4C8x2g
+  mapping: pathname
+  reactions-enabled: 1
+  emit-metadata: 0
+  theme: light
+
 # Navigation links
 navbar-links:
   关于: "about"
   博客: "blog"
   标签: "tags"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
 
 # Exclude from processing
 exclude:
